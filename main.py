@@ -1,6 +1,6 @@
 import os
 import telebot
-from telebot import types
+from telebot import *
 from datetime import date
 import gspread
 import logging
@@ -307,9 +307,9 @@ def check_money(message):
 if __name__=="__main__":
     bot.remove_webhook()
     bot.set_webhook(url=APP_URL)
-    server.run(host = "0.0.0.0", port = int(os.environ.get("PORT", 5000)))
+    server.run(host = "0.0.0.0", port=int(os.environ.get("PORT", 5000)))
 
-@server.router(f"/{BOT_TOKEN}", method = ["POST"])
+@server.router(f"/{BOT_TOKEN}", methods = ["POST"])
 def redirect_message():
     json_string = request.get_data().decode("utf-8")
     update = telebot.types.Update.de_json(json_string)
