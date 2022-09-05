@@ -9,8 +9,8 @@ from flask import Flask, request
 
 bot = telebot.TeleBot(BOT_TOKEN)
 server = Flask(__name__)
-logger = telebot.logger
-logger.setLevel(logging.DEBUG)
+#logger = telebot.logger
+#logger.setLevel(logging.DEBUG)
 #googlesheet_id = 'https://docs.google.com/spreadsheets/d/1E-F6Nfm2iLEaVTN-4eh2b2uYfE10eZ_9sNDrUZsZpzY/edit#gid=0'
 #gc = gspread.service_account(filename='my-project-19798-python-bot-53bb87dd46fb.json')
 
